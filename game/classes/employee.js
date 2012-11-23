@@ -34,8 +34,10 @@ var Employee = pc.Base.extend('Employee', {}, {
   },
 
   updateSkill: function() {
-     
+    if(satisfaction - prevSat !== 0) {
+      skill = 1; // algorithm for skills
+    }
 
-    prevSkill = skill; 
+    prevSat = satisfaction;
   } 
 });
