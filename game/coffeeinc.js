@@ -2,7 +2,7 @@
  * Game class
  */
 
-var CoffeeInc = pc.Game.extend('CoffeeInc', {}, {
+CoffeeInc = pc.Game.extend('CoffeeInc', {}, {
   /*
    * Game is loading
    */
@@ -19,6 +19,12 @@ var CoffeeInc = pc.Game.extend('CoffeeInc', {}, {
    */
 
   onReady  : function() {
+    this._super(); // DON'T TOUCH DAMMIT
+
+    if(pc.device.devMode) {
+      pc.device.loader.setDisableCache();
+    }
+
 
   }
 });
