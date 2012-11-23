@@ -8,10 +8,8 @@ var Employee = pc.Base.extend('Employee', {}, {
    */
 
   skill        : 1,
-  prevSat      : 0,
   minimumSalary: 500,
   salary       : 0,
-  satisfaction : 0,
   skillBonus   : 0,
 
   /*
@@ -24,14 +22,7 @@ var Employee = pc.Base.extend('Employee', {}, {
 
   modifySalary: function(amount) {
     salary += amount; 
-
-    updateSatisfaction();
-  },
-
-  updateSatisfaction: function() {
-    satisfaction = Math.pow(salary, 2);
-    // calculate satisfaction using salary
-  },
+  }, 
 
   updateSkill: function() {
     if(satisfaction - prevSat !== 0) {
